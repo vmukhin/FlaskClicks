@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <h1>Test</h1>
+    <button id="clickMeButton">Click Me!</button>
+    <p>Clicked <span id="counter">{{num_clicks}}</span> times.</p>
+  </body>
+  <script>
+    async function onClickSave() {
+      const request = await fetch('/saveclick', { method: 'POST' });
+      const response = await request.json();
+      const clicks = response.clicks;
+      const counter = document.getElementById('counter');
+      counter.innerText = clicks;
+    }
+    const button = document.getElementById('clickMeButton');
+    button.addEventListener('click', onClickSave);
+  </script>
+</html>
