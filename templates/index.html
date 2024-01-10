@@ -1,10 +1,32 @@
 <html>
   <head>
-    <title>Test</title>
+    <title>Clicks</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 1.1em;
+      }
+      button {
+        font-size: 1.2em;
+        padding: 0.4em;
+        color: rgb(255, 255, 255);
+        background-color: rgb(64, 64, 127);
+        border-radius: 10px;
+      }
+      #counter {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <h1>Test</h1>
-    <button id="clickMeButton">Click Me!</button>
+    <h1>Clicks Counter</h1>
+    <p><button id="clickMeButton">Click Me!</button></p>
     <p>Clicked <span id="counter">{{num_clicks}}</span> times.</p>
   </body>
   <script>
